@@ -88,7 +88,7 @@ img, svg { display: block; max-width: 100%; }
 .main-nav a { padding: 9px 14px; border-radius: 999px; font-weight: 700; color: var(--ink-soft); position: relative; transition: color .2s, background .2s; }
 .main-nav a:hover { color: var(--violet); background: rgba(124,92,252,.09); }
 
-.header-actions { display: flex; align-items: center; gap: 10px; }
+.header-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
 .icon-btn { background: #fff; border: 1px solid var(--line); width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; cursor: pointer; color: var(--ink); transition: transform .2s, box-shadow .2s, background .2s; }
 .icon-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 .cart-btn { position: relative; }

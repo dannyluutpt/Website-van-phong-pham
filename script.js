@@ -6,18 +6,18 @@
 
   /* ---------- product data ---------- */
   const PRODUCTS = [
-    { id: 1,  name: 'Bộ bút gel 12 màu pastel', cat: 'but',    catLabel: 'Bút & Mực', em: '🖊️', price: 89000,  old: 120000, rate: 4.9, sold: 1200, tag: 'sale' },
-    { id: 2,  name: 'Sổ tay bìa cứng hoạ tiết',  cat: 'so',     catLabel: 'Sổ & Vở',   em: '📒', price: 65000,  old: null,   rate: 4.8, sold: 860,  tag: 'new' },
-    { id: 3,  name: 'Hộp màu nước 24 ô',          cat: 'mau',    catLabel: 'Màu vẽ',    em: '🎨', price: 159000, old: 199000, rate: 5.0, sold: 540,  tag: 'sale' },
-    { id: 4,  name: 'Balo chống gù Galaxy',       cat: 'balo',   catLabel: 'Balo & Túi',em: '🎒', price: 349000, old: 459000, rate: 4.9, sold: 320,  tag: 'sale' },
-    { id: 5,  name: 'Bộ thước kẻ 4 món',          cat: 'dungcu', catLabel: 'Dụng cụ',   em: '📐', price: 39000,  old: null,   rate: 4.7, sold: 2100, tag: null },
-    { id: 6,  name: 'Bút chì gỗ 2B (hộp 12)',     cat: 'but',    catLabel: 'Bút & Mực', em: '✏️', price: 45000,  old: 55000,  rate: 4.9, sold: 3400, tag: 'sale' },
-    { id: 7,  name: 'Vở ô ly 200 trang',          cat: 'so',     catLabel: 'Sổ & Vở',   em: '📓', price: 18000,  old: null,   rate: 4.8, sold: 5600, tag: null },
-    { id: 8,  name: 'Bộ sáp màu 36 cây',          cat: 'mau',    catLabel: 'Màu vẽ',    em: '🖍️', price: 99000,  old: 135000, rate: 4.9, sold: 780,  tag: 'sale' },
-    { id: 9,  name: 'Túi đựng bút hình thú',      cat: 'balo',   catLabel: 'Balo & Túi',em: '👝', price: 59000,  old: null,   rate: 4.7, sold: 990,  tag: 'new' },
-    { id: 10, name: 'Gọt bút chì mini dễ thương', cat: 'dungcu', catLabel: 'Dụng cụ',   em: '✂️', price: 25000,  old: 32000,  rate: 4.6, sold: 1500, tag: 'sale' },
-    { id: 11, name: 'Bút highlight 6 màu neon',   cat: 'but',    catLabel: 'Bút & Mực', em: '🌈', price: 72000,  old: null,   rate: 5.0, sold: 1100, tag: 'new' },
-    { id: 12, name: 'Combo planner tựu trường',   cat: 'so',     catLabel: 'Sổ & Vở',   em: '📔', price: 129000, old: 179000, rate: 4.9, sold: 410,  tag: 'sale' },
+    { id: 1,  name: 'Bộ bút gel 12 màu pastel', cat: 'but',    catLabel: 'Bút & Mực', em: '🖊️', kw: 'colored,pens',      price: 89000,  old: 120000, rate: 4.9, sold: 1200, tag: 'sale' },
+    { id: 2,  name: 'Sổ tay bìa cứng hoạ tiết',  cat: 'so',     catLabel: 'Sổ & Vở',   em: '📒', kw: 'notebook',          price: 65000,  old: null,   rate: 4.8, sold: 860,  tag: 'new' },
+    { id: 3,  name: 'Hộp màu nước 24 ô',          cat: 'mau',    catLabel: 'Màu vẽ',    em: '🎨', kw: 'watercolor,paint',  price: 159000, old: 199000, rate: 5.0, sold: 540,  tag: 'sale' },
+    { id: 4,  name: 'Balo chống gù Galaxy',       cat: 'balo',   catLabel: 'Balo & Túi',em: '🎒', kw: 'backpack',          price: 349000, old: 459000, rate: 4.9, sold: 320,  tag: 'sale' },
+    { id: 5,  name: 'Bộ thước kẻ 4 món',          cat: 'dungcu', catLabel: 'Dụng cụ',   em: '📐', kw: 'ruler,stationery',  price: 39000,  old: null,   rate: 4.7, sold: 2100, tag: null },
+    { id: 6,  name: 'Bút chì gỗ 2B (hộp 12)',     cat: 'but',    catLabel: 'Bút & Mực', em: '✏️', kw: 'pencils',           price: 45000,  old: 55000,  rate: 4.9, sold: 3400, tag: 'sale' },
+    { id: 7,  name: 'Vở ô ly 200 trang',          cat: 'so',     catLabel: 'Sổ & Vở',   em: '📓', kw: 'notebook,paper',    price: 18000,  old: null,   rate: 4.8, sold: 5600, tag: null },
+    { id: 8,  name: 'Bộ sáp màu 36 cây',          cat: 'mau',    catLabel: 'Màu vẽ',    em: '🖍️', kw: 'crayons',           price: 99000,  old: 135000, rate: 4.9, sold: 780,  tag: 'sale' },
+    { id: 9,  name: 'Túi đựng bút hình thú',      cat: 'balo',   catLabel: 'Balo & Túi',em: '👝', kw: 'pencil,case',       price: 59000,  old: null,   rate: 4.7, sold: 990,  tag: 'new' },
+    { id: 10, name: 'Gọt bút chì mini dễ thương', cat: 'dungcu', catLabel: 'Dụng cụ',   em: '✂️', kw: 'pencil,sharpener',  price: 25000,  old: 32000,  rate: 4.6, sold: 1500, tag: 'sale' },
+    { id: 11, name: 'Bút highlight 6 màu neon',   cat: 'but',    catLabel: 'Bút & Mực', em: '🌈', kw: 'highlighter,marker',price: 72000,  old: null,   rate: 5.0, sold: 1100, tag: 'new' },
+    { id: 12, name: 'Combo planner tựu trường',   cat: 'so',     catLabel: 'Sổ & Vở',   em: '📔', kw: 'planner,notebook',  price: 129000, old: 179000, rate: 4.9, sold: 410,  tag: 'sale' },
   ];
 
   const fmt = (n) => n.toLocaleString('vi-VN') + '₫';
@@ -36,6 +36,7 @@
           ${tag}
           <button class="product-fav" aria-label="Yêu thích" data-fav="${p.id}">🤍</button>
           <span class="em">${p.em}</span>
+          <img class="product-img" src="https://loremflickr.com/600/600/${p.kw}?lock=${p.id}" alt="${p.name}" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('loaded')" onerror="this.remove()">
         </div>
         <div class="product-body">
           <span class="product-cat">${p.catLabel}</span>
@@ -108,6 +109,7 @@
     let totalQty = 0, total = 0;
     cart.forEach((it) => { totalQty += it.qty; total += it.qty * it.product.price; });
     cartCountEl.textContent = totalQty;
+    cartCountEl.classList.toggle('empty', totalQty === 0);
 
     if (cart.size === 0) {
       cartItemsEl.innerHTML = `<div class="cart-empty"><span class="big-emo">🛒</span>Giỏ hàng đang trống.<br>Hãy chọn vài món đồ xinh nhé!</div>`;

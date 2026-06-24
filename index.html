@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mực Tím — Văn phòng phẩm tươi vui cho tuổi học trò. Bút, vở, màu vẽ, balo và hàng nghìn món đồ xinh xắn cho mùa tựu trường." />
+  <meta name="theme-color" content="#7C5CFC" />
+  <title>Mực Tím — Văn phòng phẩm tươi vui cho học trò</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%8F%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Floating decorative blobs -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Mực Tím trang chủ">
+        <span class="logo-mark">
+          <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#9B6BFF"/>
+                <stop offset="1" stop-color="#FF6FB5"/>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="13" fill="url(#lg)"/>
+            <path d="M16 31 L28 13 L34 17 L22 35 L15 36 Z" fill="#FFF" opacity="0.95"/>
+            <circle cx="32" cy="15" r="2.2" fill="#FFD23F"/>
+          </svg>
+        </span>
+        <span class="logo-text">Mực Tím</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <a href="#categories">Danh mục</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#sale">Khuyến mãi</a>
+        <a href="#features">Vì sao chọn</a>
+        <a href="#reviews">Đánh giá</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Mở giỏ hàng">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill reveal" data-reveal>🎒 Mùa tựu trường 2026 đã đến!</span>
+          <h1 class="reveal" data-reveal>
+            Văn phòng phẩm
+            <span class="hl">tươi vui</span>
+            cho tuổi học trò
+          </h1>
+          <p class="hero-sub reveal" data-reveal>
+            Bút màu, sổ tay, balo và hàng nghìn món đồ xinh xắn — giúp mỗi giờ học
+            trở nên rực rỡ và đầy cảm hứng. Giao hàng siêu tốc, giá yêu thương.
+          </p>
+          <div class="hero-cta reveal" data-reveal>
+            <a href="#products" class="btn btn-primary">Mua sắm ngay <span class="btn-arrow">→</span></a>
+            <a href="#categories" class="btn btn-ghost">Khám phá danh mục</a>
+          </div>
+          <div class="hero-stats reveal" data-reveal>
+            <div class="stat"><b class="count" data-target="5000">0</b><small>+ sản phẩm</small></div>
+            <div class="stat"><b class="count" data-target="98">0</b><small>% hài lòng</small></div>
+            <div class="stat"><b class="count" data-target="120">0</b><small>+ trường học</small></div>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="hero-card float-y">
+            <div class="hero-ribbon">Best seller ✨</div>
+            <div class="hero-illustration">
+              <!-- Cute stationery illustration -->
+              <svg viewBox="0 0 320 320" width="100%" role="img" aria-label="Minh hoạ văn phòng phẩm">
+                <defs>
+                  <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8FC7"/><stop offset="1" stop-color="#FF5FA8"/></linearGradient>
+                  <linearGradient id="pen1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#FFB300"/></linearGradient>
+                  <linearGradient id="pen2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EE7C7"/><stop offset="1" stop-color="#21C7A8"/></linearGradient>
+                  <linearGradient id="pen3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7EB6FF"/><stop offset="1" stop-color="#4E8CFF"/></linearGradient>
+                  <linearGradient id="book" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9B6BFF"/><stop offset="1" stop-color="#7C5CFC"/></linearGradient>
+                </defs>
+                <ellipse cx="160" cy="280" rx="120" ry="18" fill="#000" opacity="0.06"/>
+                <!-- book stack -->
+                <rect x="60" y="232" width="200" height="26" rx="7" fill="url(#book)"/>
+                <rect x="74" y="210" width="180" height="26" rx="7" fill="#FF6FB5"/>
+                <rect x="64" y="188" width="195" height="26" rx="7" fill="#FFD23F"/>
+                <!-- cup -->
+                <path d="M120 120 h80 l-10 110 h-60 z" fill="url(#cup)"/>
+                <ellipse cx="160" cy="120" rx="40" ry="11" fill="#FF9ED0"/>
+                <!-- pencils -->
+                <g class="spin-pen">
+                  <rect x="135" y="40" width="14" height="86" rx="6" fill="url(#pen1)"/>
+                  <path d="M135 40 l7 -16 l7 16 z" fill="#FFE7B0"/><circle cx="142" cy="28" r="3" fill="#5a3b00"/>
+                </g>
+                <rect x="158" y="52" width="14" height="74" rx="6" fill="url(#pen2)"/>
+                <path d="M158 52 l7 -15 l7 15 z" fill="#C8FFEF"/><circle cx="165" cy="40" r="3" fill="#0e6b58"/>
+                <rect x="181" y="46" width="14" height="80" rx="6" fill="url(#pen3)"/>
+                <path d="M181 46 l7 -15 l7 15 z" fill="#D5E8FF"/><circle cx="188" cy="34" r="3" fill="#1c3d73"/>
+                <!-- face on cup -->
+                <circle cx="148" cy="165" r="4.5" fill="#3a2a5c"/>
+                <circle cx="172" cy="165" r="4.5" fill="#3a2a5c"/>
+                <path d="M146 180 q14 14 28 0" stroke="#3a2a5c" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <circle cx="138" cy="176" r="5" fill="#fff" opacity="0.5"/>
+                <circle cx="182" cy="176" r="5" fill="#fff" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <span class="sticker sticker-1 float-y">✏️</span>
+          <span class="sticker sticker-2 float-y2">🖍️</span>
+          <span class="sticker sticker-3 float-y">📐</span>
+          <span class="sticker sticker-4 float-y2">🎨</span>
+          <span class="sticker sticker-5 float-y">⭐</span>
+        </div>
+      </div>
+
+      <!-- marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>✏️ FREESHIP đơn từ 99K</span><span>🎁 Quà tặng mỗi đơn hàng</span><span>🌈 Hàng mới mỗi tuần</span><span>🚀 Giao trong 2 giờ</span><span>💜 Đổi trả trong 7 ngày</span>
+          <span>✏️ FREESHIP đơn từ 99K</span><span>🎁 Quà tặng mỗi đơn hàng</span><span>🌈 Hàng mới mỗi tuần</span><span>🚀 Giao trong 2 giờ</span><span>💜 Đổi trả trong 7 ngày</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES (BENTO) ===== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Danh mục nổi bật</span>
+          <h2>Chọn món đồ bạn yêu thích 🌟</h2>
+          <p>Tất cả những gì bạn cần cho một năm học rực rỡ, gọn gàng trong một nơi.</p>
+        </div>
+
+        <div class="bento">
+          <a href="#products" class="bento-card c1 reveal" data-reveal>
+            <div class="bento-emoji">🖊️</div>
+            <h3>Bút & Mực</h3>
+            <p>Bút bi, bút máy, bút gel đủ màu</p>
+            <span class="bento-go">Xem ngay →</span>
+          </a>
+          <a href="#products" class="bento-card c2 reveal" data-reveal>
+            <div class="bento-emoji">📒</div>
+            <h3>Sổ & Vở</h3>
+            <p>Sổ tay, vở ô ly, planner xinh</p>
+            <span class="bento-go">Xem ngay →</span>
+          </a>
+          <a href="#products" class="bento-card c3 reveal" data-reveal>
+            <div class="bento-emoji">🎨</div>
+            <h3>Màu vẽ & Mỹ thuật</h3>
+            <p>Màu nước, sáp, cọ và giấy vẽ — thỏa sức sáng tạo</p>
+            <span class="bento-go">Xem ngay →</span>
+          </a>
+          <a href="#products" class="bento-card c4 reveal" data-reveal>
+            <div class="bento-emoji">🎒</div>
+            <h3>Balo & Túi</h3>
+            <p>Đựng đồ siêu xinh</p>
+            <span class="bento-go">Xem ngay →</span>
+          </a>
+          <a href="#products" class="bento-card c5 reveal" data-reveal>
+            <div class="bento-emoji">📐</div>
+            <h3>Dụng cụ học tập</h3>
+            <p>Thước, compa, gọt bút chì</p>
+            <span class="bento-go">Xem ngay →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="section section-tint" id="products">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Sản phẩm bán chạy</span>
+          <h2>Hàng hot được yêu thích nhất 💜</h2>
+          <p>Lọc theo danh mục để tìm món đồ ưng ý của bạn.</p>
+        </div>
+
+        <div class="filters reveal" data-reveal id="filters">
+          <button class="chip active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="but">Bút & Mực</button>
+          <button class="chip" data-filter="so">Sổ & Vở</button>
+          <button class="chip" data-filter="mau">Màu vẽ</button>
+          <button class="chip" data-filter="balo">Balo & Túi</button>
+          <button class="chip" data-filter="dungcu">Dụng cụ</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"><!-- JS injected --></div>
+      </div>
+    </section>
+
+    <!-- ===== SALE / COUNTDOWN ===== -->
+    <section class="section" id="sale">
+      <div class="container">
+        <div class="sale-banner reveal" data-reveal>
+          <div class="sale-left">
+            <span class="eyebrow light">⚡ Flash Sale tựu trường</span>
+            <h2>Giảm đến <span class="big">50%</span> toàn bộ combo học tập</h2>
+            <p>Nhanh tay sở hữu những combo siêu hời trước khi hết giờ vàng!</p>
+            <div class="countdown" id="countdown" aria-label="Đếm ngược khuyến mãi">
+              <div class="cd-box"><b id="cdH">00</b><small>Giờ</small></div>
+              <div class="cd-sep">:</div>
+              <div class="cd-box"><b id="cdM">00</b><small>Phút</small></div>
+              <div class="cd-sep">:</div>
+              <div class="cd-box"><b id="cdS">00</b><small>Giây</small></div>
+            </div>
+            <a href="#products" class="btn btn-light">Săn deal ngay →</a>
+          </div>
+          <div class="sale-right" aria-hidden="true">
+            <div class="sale-badge float-y">-50%</div>
+            <span class="sale-emoji e1 float-y2">🎉</span>
+            <span class="sale-emoji e2 float-y">🛍️</span>
+            <span class="sale-emoji e3 float-y2">✨</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section section-tint" id="features">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Vì sao chọn Mực Tím</span>
+          <h2>Mua sắm an tâm, học tập vui vẻ 🌈</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature reveal" data-reveal>
+            <div class="feature-ico" style="--c:#7C5CFC">🚀</div>
+            <h3>Giao siêu tốc</h3>
+            <p>Nhận hàng trong 2 giờ tại nội thành, freeship cho đơn từ 99K.</p>
+          </div>
+          <div class="feature reveal" data-reveal>
+            <div class="feature-ico" style="--c:#FF6FB5">🛡️</div>
+            <h3>Hàng chính hãng</h3>
+            <p>100% sản phẩm chính hãng, an toàn cho học sinh các cấp.</p>
+          </div>
+          <div class="feature reveal" data-reveal>
+            <div class="feature-ico" style="--c:#21C7A8">💰</div>
+            <h3>Giá yêu thương</h3>
+            <p>Cam kết giá tốt nhất, nhiều ưu đãi cho học sinh – sinh viên.</p>
+          </div>
+          <div class="feature reveal" data-reveal>
+            <div class="feature-ico" style="--c:#FFB300">🎁</div>
+            <h3>Quà tặng xinh</h3>
+            <p>Sticker và quà tặng dễ thương kèm theo mỗi đơn hàng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <span class="eyebrow">Khách hàng nói gì</span>
+          <h2>Niềm vui của các bạn nhỏ 💌</h2>
+        </div>
+        <div class="reviews-grid">
+          <figure class="review reveal" data-reveal>
+            <div class="stars">★★★★★</div>
+            <blockquote>"Bút màu siêu đẹp, vẽ lên giấy lên màu rất tươi. Đóng gói cẩn thận, có cả sticker tặng kèm nữa!"</blockquote>
+            <figcaption><span class="avatar" style="--c:#FF6FB5">M</span> Minh Anh · Lớp 8</figcaption>
+          </figure>
+          <figure class="review reveal" data-reveal>
+            <div class="stars">★★★★★</div>
+            <blockquote>"Balo xinh mà rất chắc chắn, con mình thích lắm. Giao hàng nhanh, giá lại hợp lý."</blockquote>
+            <figcaption><span class="avatar" style="--c:#7C5CFC">H</span> Chị Hương · Phụ huynh</figcaption>
+          </figure>
+          <figure class="review reveal" data-reveal>
+            <div class="stars">★★★★★</div>
+            <blockquote>"Mua combo tựu trường tiết kiệm được kha khá. Sổ tay đẹp dùng để viết planner cực mê."</blockquote>
+            <figcaption><span class="avatar" style="--c:#21C7A8">T</span> Thảo Nguyên · Sinh viên</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="newsletter reveal" data-reveal>
+          <div class="news-copy">
+            <h2>Đăng ký nhận ưu đãi 🎈</h2>
+            <p>Nhận voucher 30K cho đơn đầu tiên và tin tức hàng mới mỗi tuần.</p>
+          </div>
+          <form class="news-form" id="newsForm">
+            <input type="email" id="newsEmail" placeholder="Email của bạn..." required aria-label="Email" />
+            <button type="submit" class="btn btn-primary">Đăng ký</button>
+          </form>
+          <p class="news-ok" id="newsOk" hidden>🎉 Cảm ơn bạn! Voucher đã được gửi tới email.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+              <rect x="4" y="4" width="40" height="40" rx="13" fill="url(#lg)"/>
+              <path d="M16 31 L28 13 L34 17 L22 35 L15 36 Z" fill="#FFF" opacity="0.95"/>
+            </svg>
+          </span>
+          <span class="logo-text">Mực Tím</span>
+        </a>
+        <p>Văn phòng phẩm tươi vui cho tuổi học trò. Đồng hành cùng bạn trên mỗi trang vở.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Cửa hàng</h4>
+        <a href="#categories">Danh mục</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#sale">Khuyến mãi</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ</h4>
+        <a href="#">Chính sách đổi trả</a>
+        <a href="#">Vận chuyển</a>
+        <a href="#">Liên hệ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <a href="#">📍 123 Nguyễn Văn Học, TP.HCM</a>
+        <a href="#">📞 1900 1234</a>
+        <a href="#">✉️ xinchao@muctim.vn</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Mực Tím. Website mẫu thiết kế bởi <b>Studio của bạn</b> — Demo quảng bá dịch vụ thiết kế website.</p>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng của bạn 🛒</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Tổng cộng</span><b id="cartTotal">0₫</b></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Thanh toán</button>
+    </div>
+  </aside>
+
+  <!-- toast -->
+  <div class="toast" id="toast"></div>
+
+  <button class="back-top" id="backTop" aria-label="Lên đầu trang">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
